@@ -1,18 +1,24 @@
+\makeatletter
+\def\input@path{{./}}
+\makeatother
+
 %Preamble ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \documentclass{book}
 \makeindex  %mendex RiichiBook1.idx
 	% Put "\thispagestyle{empty}" in RiichiBook1.ind
 % Font
 \usepackage{pie2e}  % Printing mahjong tiles (from the piemf package)
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
+\usepackage{fontspec}
 \usepackage{blindtext,tgpagella,textcomp,amsmath,tipa,lipsum,eurosym}
 % graphic commands
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{graphicx, graphics,color,wrapfig,tikz} 
 \usepackage[abs]{overpic}
-\usepackage[dvipdfmx]{pict2e}
-\usepackage[dvipdfmx,colorlinks=true, urlcolor={blue!50!blue}, citecolor={blue!50!blue}, linkcolor={MyBlue}]{hyperref}
+\usepackage{polyglossia}
+\setmainlanguage{english}
+\setotherlanguage{japanese}
+\setdefaultlanguage{english}
+\setmainfont{Noto Serif JP}
 
 % To remove page numbers from TOC
 %\let\Contentsline\contentsline
@@ -153,7 +159,7 @@ Daina Chiba\\
 {\small
 Copyright \copyright ~2016--2020 Daina Chiba.\\
 Permission is granted to copy, distribute, and/or modify this document
-under the terms of the Creative Commons Attribution NonCommercial 3.0 Unported License, available at \url{https://bit.ly/1xIMXnA}.
+under the terms of the Creative Commons Attribution NonCommercial 3.0 Unported License, available at \textbf{https://bit.ly/1xIMXnA}.
 
 \vspace{.2in}
 \noindent
@@ -165,7 +171,7 @@ Cover photo \copyright ~2015 Katar\'{i}na M\'{o}zov\'{a}, Courtesy of Riichi Mah
 The original form of this book is \LaTeX\ source code.  Compiling this
 \LaTeX\ source has the effect of generating a device-independent
 representation of a manuscript. The \LaTeX\ source for this book is available from 
-\url{https://github.com/dainachiba/RiichiBooks}.
+\textbf{https://github.com/dainachiba/RiichiBooks}.
 
 \vfill
 \noindent
@@ -174,7 +180,7 @@ representation of a manuscript. The \LaTeX\ source for this book is available fr
 \noindent
 {\bf Daina Chiba} is a political scientist and an applied statistician working as a lecturer at the University of Essex in England. 
 He has been playing riichi mahjong for almost 20 years. 
-He can be reached at \href{mailto:daina.chiba@gmail.com}{\tt daina.chiba@gmail.com}.
+He can be reached at daina.chiba@gmail.com.
 } % end small
 
 
@@ -187,10 +193,8 @@ He can be reached at \href{mailto:daina.chiba@gmail.com}{\tt daina.chiba@gmail.c
 
 % Table of Contents ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-{\hypersetup{linkcolor={black}}
-	\tableofcontents
-	%\listoftables
-}
+\tableofcontents
+%\listoftables
 
 \newpage
 
